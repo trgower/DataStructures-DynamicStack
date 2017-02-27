@@ -1,0 +1,14 @@
+project4: Main.o StudentList.o StudentStack.o Student.o
+	g++ Main.o StudentList.o StudentStack.o Student.o -o project4
+
+Main.o: Main.cpp StudentList.h StudentStack.h Student.h
+	g++ -c Main.cpp
+
+StudentList.o: StudentList.cpp StudentList.h Student.h
+	g++ -c StudentList.cpp
+
+StudentStack.o: StudentStack.cpp StudentStack.h Student.h
+	g++ -c StudentStack.cpp
+
+Student.o: Student.cpp Student.h
+	g++ -c Student.cpp
